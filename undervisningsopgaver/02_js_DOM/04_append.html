@@ -76,37 +76,13 @@
     </footer>
 
     <script>
-        //        const overskrift = document.querySelector("h1");
-        //        overskrift.textContent = "En anden titel";
-        //        console.log(overskrift.textContent);
-        //
-        //        const underoverskrift = document.querySelector("h2");
-        //        underoverskrift.textContent;
-        //        console.log(underoverskrift.textContent);
-        //
-        //        const h3 = document.querySelector("h3");
-        //        h3.textContent = "anden h3";
-        //        console.log(h3.textContent);
-        //
-        //        const h32 = document.querySelector("h3:nth-child(2)");
-        //        h32.textContent = "anden h3";
-        //        console.log(h32.textContent);
-        //
-        //        const article = document.querySelector("article");
-        //        article.textContent;
-        //        console.log(article.textContent);
-        //
-        //        const article2 = document.querySelector("article:nth-child(1)");
-        //        article2.textContent;
-        //        console.log(article2.textContent);
-        //
-        //        const lorem = document.querySelector("p");
-        //        lorem.textContent = "en anden lorem ipsum";
-        //        console.log(lorem.textContent);
-        //
-        //        const img = document.querySelector("img");
-        //        img.src = "https://placeimg.com/640/480/any";
-        //        img.alt = "En anden alt tekst";
+        //nyt billede tag
+        let billedeTag = document.createElement("img");
+        billedeTag.src = "https://placeimg.com/640/480/any";
+        //nyt p tag
+        let lorem = document.createElement("p")
+        //tekst til p tag
+        let loremTekst = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellendus asperiores aspernatur deserunt impedit delectus illum rerum expedita ex voluptatibus, quisquam aliquam, culpa fugit esse dolor officia itaque, eveniet iure. ");
 
         let mainSection = document.querySelector("section");
         //nyt article element
@@ -115,11 +91,17 @@
         let overskrift = document.createElement("h3");
         //tekst til overskrift
         let overskriftText = document.createTextNode("Article 3");
+        //tilføj img til article
+        newArticle.appendChild(billedeTag);
         //indsæt overskrift
-        overskrift.append(overskriftText);
+        overskrift.appendChild(overskriftText);
         //tilføj overskrift til article
         newArticle.appendChild(overskrift);
         //tilføj article til section
         mainSection.appendChild(newArticle);
+        //tilføj tekst til p
+        lorem.appendChild(loremTekst);
+        //tilføj p til article
+        newArticle.appendChild(loremTekst);
     </script>
 </body></html>
