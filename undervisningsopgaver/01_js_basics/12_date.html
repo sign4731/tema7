@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <p>Hvor gammel er du?</p>
+    <input type="text" id="minAlder">
+    <p>Hvor gammel er din date?</p>
+    <input type="text" id="dateAlder">
+    <button>Udregn</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let minAlder = document.querySelector("#minAlder").value;
+            let dateAlder = document.querySelector("#dateAlder").value;
+            let udregnMinAlder = minAlder / 2 + 7;
+            //            udregnMinAlder = minAlder / 2 + 7;
+            let udregnDateAlder = dateAlder / 2 + 7;
+            let resultat;
+
+            if (minAlder < 15) {
+                resultat = "Du er ikke gamle nok til denne udregner";
+
+            } else if (dateAlder < 15) {
+                resultat = "Din date er ikke gammel nok til denne udregner";
+
+            } else if (udregnMinAlder == dateAlder) {
+                resultat = "I passer perfekt sammen!";
+
+            } else if (udregnDateAlder == minAlder) {
+                resultat = "I passer perfekt sammen!";
+
+            } else {
+                resultat = "I passer ikke sammen...";
+            }
+            console.log(resultat)
+        }
+    </script>
+</body></html>
