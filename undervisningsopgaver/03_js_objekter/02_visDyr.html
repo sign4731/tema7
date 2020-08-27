@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <article></article>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Siden er loadet");
+            const dyr = {
+            "navn": "gris",
+            "type": "pattegris",
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png",
+            "levested": "svinefarme"
+        }
+        console.log(`Dyr: ${dyr.navn} type: ${dyr.type} billede: ${dyr.billede} levested: ${dyr.levested}`);
+
+            let udskrivTekst = document.createTextNode(`Dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested}`);
+            let billede = document.createElement("img");
+            billede.src = "http://mabe-kea.dk/E19/pics/pig.png";
+
+            document.querySelector("article").appendChild(udskrivTekst);
+            document.querySelector("article").appendChild(billede);
+        }
+
+    </script>
+</body></html>
