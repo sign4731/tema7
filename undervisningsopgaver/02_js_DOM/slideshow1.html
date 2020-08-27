@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_struktur</title>
+    <style>
+        * {
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tro på det...</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/any">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellendus asperiores aspernatur deserunt impedit delectus illum rerum expedita ex voluptatibus, quisquam aliquam, culpa fugit esse dolor officia itaque, eveniet iure.</p>
+                <button>videre</button>
+            </article>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Siden er loadet");
+            let tal = 1;
+
+            document.querySelector("button").addEventListener("click", skiftBillede);
+
+            function skiftBillede() {
+
+                const img = document.querySelector("img");
+                img.src = "https://placeimg.com/400/300/arch?t=" + tal++;
+
+
+
+
+            }
+        }
+    </script>
+</body></html>
