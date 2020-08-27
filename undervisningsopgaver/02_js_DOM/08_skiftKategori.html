@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_struktur</title>
+    <style>
+        * {
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            border: solid black 1px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        article {
+            border: solid black 1px;
+        }
+
+        img {
+            align-self: center;
+        }
+
+        footer {
+            text-align: center;
+
+        }
+
+        /*
+        section {
+        display: flex;
+        flex-wrap: wrap;
+        }
+*/
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/any">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellendus asperiores aspernatur deserunt impedit delectus illum rerum expedita ex voluptatibus, quisquam aliquam, culpa fugit esse dolor officia itaque, eveniet iure.</p>
+            </article>
+        </section>
+        <section>
+
+            <article>
+                <img src="https://placeimg.com/640/480/any">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellendus asperiores aspernatur deserunt impedit delectus illum rerum expedita ex voluptatibus, quisquam aliquam, culpa fugit esse dolor officia itaque, eveniet iure.</p>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Siden er loadet");
+        }
+
+        const overskrift = document.querySelector("h1");
+        overskrift.textContent = "En anden titel";
+        console.log(overskrift.textContent);
+
+        const underoverskrift = document.querySelector("h2");
+        underoverskrift.textContent;
+        console.log(underoverskrift.textContent);
+
+        const h3 = document.querySelector("h3");
+        h3.textContent = "anden h3";
+        console.log(h3.textContent);
+
+        const h32 = document.querySelector("h3:nth-child(2)");
+        h32.textContent = "anden h3";
+        console.log(h32.textContent);
+
+        const article = document.querySelector("article");
+        article.textContent;
+        console.log(article.textContent);
+
+        const article2 = document.querySelector("article:nth-child(1)");
+        article2.textContent;
+        console.log(article2.textContent);
+
+        const lorem = document.querySelector("p");
+        lorem.textContent = "en anden lorem ipsum";
+        console.log(lorem.textContent);
+
+        let tal = Math.round(Math.random() * 10);
+
+
+        document.querySelector("img").addEventListener("click", skiftBillede);
+
+        function skiftBillede() {
+            const img = document.querySelector("img");
+            img.src = "https://placeimg.com/400/300/arch?t=" + tal;
+        }
+    </script>
+</body></html>
