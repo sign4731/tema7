@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_struktur</title>
+    <style>
+        * {
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tro på det...</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/any">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellendus asperiores aspernatur deserunt impedit delectus illum rerum expedita ex voluptatibus, quisquam aliquam, culpa fugit esse dolor officia itaque, eveniet iure.</p>
+                <button id="knap">videre</button>
+            </article>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Siden er loadet");
+            let tal = 1;
+            const billeder = [{
+                    "billede1": "https://placeimg.com/400/300/arch?t=1"
+                },
+                {
+                    "billede2": "https://placeimg.com/400/300/arch?t=2"
+                },
+                {
+                    "billede3": "https://placeimg.com/400/300/arch?t=3"
+                },
+                {
+                    "billede4": "https://placeimg.com/400/300/arch?t=4"
+                },
+                {
+                    "billede5": "https://placeimg.com/400/300/arch?t=5"
+                }
+            ]
+
+            document.querySelector("button").addEventListener("click", skiftBillede);
+
+            function skiftBillede() {
+
+
+
+                if (tal < 5) {
+                    const KnapTekst = document.querySelector("#knap");
+                    KnapTekst.textContent = "Videre";
+                    const img = document.querySelector("img");
+                    img.src = "https://placeimg.com/400/300/arch?t=" + tal++;
+                    console.log(tal);
+                } else {
+                    const nyKnapTekst = document.querySelector("#knap");
+                    nyKnapTekst.textContent = "Forfra";
+                    console.log("Forfra");
+                    tal = 1;
+
+                }
+
+            }
+        }
+    </script>
+</body></html>
