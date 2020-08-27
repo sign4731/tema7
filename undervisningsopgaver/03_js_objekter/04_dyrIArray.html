@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <article></article>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("Siden er loadet");
+            const dyr = [{
+                    "navn": "gris",
+                    "type": "pattegris",
+                    "billede": "http://mabe-kea.dk/E19/pics/pig.png",
+                    "levested": "svinefarme"
+                },
+                {
+                    "navn": "frø",
+                    "type": "padde",
+                    "billede": "http://mabe-kea.dk/E19/pics/frog.png",
+                    "levested": "sump"
+                },
+                {
+                    "navn": "ræv",
+                    "type": "pattedyr",
+                    "billede": "http://mabe-kea.dk/E19/pics/fox.png",
+                    "levested": "storby"
+                },
+                {
+                    "navn": "sild",
+                    "type": "fisk",
+                    "billede": "http://mabe-kea.dk/E19/pics/sild.jpg",
+                    "levested": "vandet"
+                },
+                {
+                    "navn": "krokodille",
+                    "type": "pattedyr",
+                    "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg",
+                    "levested": "australien"
+                }
+            ]
+            console.log(dyr);
+            //
+            //            let udskrivTekst = document.createTextNode(`Dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested}`);
+            //            let billede = document.createElement("img");
+            //            billede.src = "http://mabe-kea.dk/E19/pics/pig.png";
+            //
+            //            document.querySelector("article").appendChild(udskrivTekst);
+            //            document.querySelector("article").appendChild(billede);
+        }
+    </script>
+</body></html>
